@@ -63,19 +63,30 @@ class App extends React.Component {
     }
     return (
     <div>
-    <h1>Know the Weather</h1>
-     <form onSubmit={this.getData}>
+    <h1>Know the Weather !</h1>
+     {/* <form onSubmit={this.getData}>
        <label>Want to know the weather for 
        <input placeholder = {"City, Country"} type = "text" 
          value = {this.props.redux.get('location')}
          onChange = {this.changeLocation}
        />
        </label>
-     </form>
+     </form> */}
+     <div className="search-box">
+     <form onSubmit={this.getData}>
+          <input 
+            type="text"
+            className="search-bar"
+            placeholder="Search..."
+            onChange={this.changeLocation}
+            value={this.props.redux.get('location')}
+          />
+          </form>
+        </div>
      {(this.props.redux.getIn(['data', 'list'])) ? (
           <div className="wrapper">
     {this.props.redux.getIn(['selected', 'temp']) ? (
-     <p className="temp-wrapper"> The temperature on <span className="temp-date">  { this.props.redux.getIn(['selected', 'date']) }  </span> will be  <span className="temp"> {this.props.redux.getIn(['selected', 'temp'])} </span> <span className="temp-symbol">°C</span>
+     <p className="temp-wrapper"> The temperature on <span className="temp-date">  { this.props.redux.getIn(['selected', 'date']) }  </span>  will be  <span className="temp"> {this.props.redux.getIn(['selected', 'temp'])} </span> <span className="temp-symbol">°C</span>
         </p> ) : (
           <p className="temp-wrapper">The current temperature is  <span className="temp"> { currentTemp } </span> <span className="temp-symbol">°C</span></p>
             )}
