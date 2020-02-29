@@ -6,5 +6,5 @@ Clone the project and run:
 To install all the necessary packages required to run the project.<br />
 
 ### `npm start`
-To run the app the App.<br />
+To run the App.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
