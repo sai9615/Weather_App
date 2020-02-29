@@ -9,13 +9,18 @@ h1 {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 30px;
-  font-family: 'ZCOOL QingKe HuangYou' ;
+  font-family: "ZCOOL QingKe HuangYou";
   color: white;
   font-size: 70px;
 }
 
+h2 {
+  font-family: "ZCOOL QingKe HuangYou";
+  color: black;
+  font-weight: 800;
+}
 form {
-  font-family: 'ZCOOL QingKe HuangYou' ;
+  font-family: "ZCOOL QingKe HuangYou";
   color: white;
   text-align: center;
 }
@@ -30,14 +35,14 @@ input {
 }
 
 .wrapper {
-  max-width: 680px;
+  text-align: center;
   margin: 0 auto;
 }
 
 .temp-wrapper {
   text-align: center;
   position: relative;
-  font-family: 'ZCOOL QingKe HuangYou' ;
+  font-family: "ZCOOL QingKe HuangYou";
   color: white;
   font-size: 30px;
 }
@@ -45,7 +50,7 @@ input {
 .temp {
   font-size: 64px;
   margin-left: 12px;
-  font-family: 'ZCOOL QingKe HuangYou' ;
+  font-family: "ZCOOL QingKe HuangYou";
   color: white;
 }
 
@@ -77,15 +82,15 @@ input {
   left: 0;
   z-index: -99;
   &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background: rgba(0,0,0,0.75)
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
   }
 }
 .video-foreground,
@@ -99,10 +104,16 @@ input {
 }
 
 @media (min-aspect-ratio: 16/9) {
-  .video-foreground { height: 300%; top: -100%; }
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
 }
 @media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 300%; left: -100%; }
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
 }
 
 .search-box {
@@ -125,7 +136,7 @@ input {
   margin-top: -25px;
 
   box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
-  
+
   color: #313131;
   font-size: 20px;
 
@@ -134,4 +145,28 @@ input {
 
 .search-box .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.75);
+}
+
+.bkg {
+  text-align: center;
+  padding: 1%;
+}
+
+.plot {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  position: fixed;
+  left: -10px;
+  bottom: 0;
+  width: 100%;
+  font-family: "Oxanium";
+  text-align: right;
+  color: white;
+  font-size: small;
+}
+
+.emoji{
+padding-top: 10%;
 }
