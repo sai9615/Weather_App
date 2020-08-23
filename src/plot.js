@@ -5,7 +5,6 @@ class Plot extends React.Component {
   shouldComponentUpdate(nextProps) {
     const xDataChanged = !this.props.xData.equals(nextProps.xData);
     const yDataChanged = !this.props.yData.equals(nextProps.yData);
-    console.log("was here");
     return xDataChanged || yDataChanged;
   }
 
